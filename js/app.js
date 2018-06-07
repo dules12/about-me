@@ -64,3 +64,29 @@ for (var i = 0; i < 4; i++) {
     europe = prompt ('How many countries have I been to in Europe?');
   }
 }
+
+var sportsGuess = (prompt('Name a sport I played in high school. I will give you six guesses!').toLowerCase());
+var sports = ['soccer','tennis','running'];
+for (var x = 0; x < 5; x++) {
+  if (sportsGuess === ('tennis')) {
+    alert('Yes that is correct!');
+    alert('I played soccer, tennis & ran cross country!');
+    break; }
+  if (sportsGuess === ('soccer')) {
+    alert('Yet that is correct!');
+    alert('I played soccer, tennis & ran cross country!');
+    break; }
+  if (sportsGuess === ('running')) {
+    alert('Yet that is correct!');
+    alert('I played soccer, tennis & ran cross country!');
+    break;
+  } else if (sportsGuess !== sports) {
+    alert ('That is not correct!');
+    sportsGuess = prompt ('Name a sport I played in high school');
+    if (x === 4) {
+      alert('Sorry you didn\'t guess any :/ I played soccer, tennis & ran cross country!');
+    }
+  }
+}
+
+
