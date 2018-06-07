@@ -64,6 +64,7 @@ for (var i = 0; i < 4; i++) {
     europe = prompt ('How many countries have I been to in Europe?');
   }
 }
+console.log('Q: How many countries in Europe have I been to? A: 5');
 
 var sportsGuess = (prompt('Name a sport I played in high school. I will give you six guesses!').toLowerCase());
 var sports = ['soccer','tennis','running'];
@@ -88,5 +89,4 @@ for (var x = 0; x < 5; x++) {
     }
   }
 }
-
-
+console.log('Q: Name a sport I played in high school. A: Soccer, Tennis, Cross Country');
