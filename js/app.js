@@ -1,6 +1,6 @@
 'use strict';
 
-alert('Learn more about me by answering these five yes or no questions!');
+alert('Learn more about me by answering these five questions!');
 var userName = prompt('First off, can I get your name real quick?');
 
 var born = prompt('Was I born on the west coast of the US?').toLowerCase();
