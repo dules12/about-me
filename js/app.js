@@ -50,3 +50,17 @@ console.log('Q: Is pizza my favroite food A: Yes');
 
 
 
+var europe = parseInt(prompt('How many countries in Europe have I been to? You have 4 guesses!'));
+var europeCorrectAnswer = 5;
+for (var i = 0; i < 4; i++) {
+  if(europe === europeCorrectAnswer) {
+    alert('Yes that is correct!');
+    break;
+  } else if (europe > europeCorrectAnswer) {
+    alert ('Unfortunately I havn\'t traveled that much yet!');
+    europe = prompt('How many countries have I been to in Europe?');
+  } else if (europe < europeCorrectAnswer) {
+    alert ('I\'ve traveled more than that! ');
+    europe = prompt ('How many countries have I been to in Europe?');
+  }
+}
