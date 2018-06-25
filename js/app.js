@@ -9,18 +9,57 @@ var food;
 var europe;
 var sportsGuess;
 var totalScore;
+var bornScore;
+var schoolScore;
+var languageScore;
+
+var questions1 = 'Was I born on the west coast of the US?';
+var questions2 = 'Did I major in economics in college?';
+var questions3 = 'Did I study Mandarin Chinese in school?';
+var questions4 = 'Have I traveled to South Africa?';
+var questions5 = 'Is pizza my favorite food?';
+var questions = [questions1, questions2, questions3, questions4, questions5];
+
+
+var question1Answer = 'no';
+var question2Answer = 'no';
+var question3Answer = 'yes';
+var question4Answer = 'no';
+var question5Answer = 'yes';
+var questionAnswers = [question1Answer, question2Answer, question3Answer, question4Answer, question5Answer];
+var prompts
 
 function getUserName() {
   alert('Learn more about me by answering these five questions!');
   userName = prompt('First off, can I get your name real quick?');
 }
 
+function questionPrompt() {
+  for (var x = 0; x < questions.length; x++) {
+    var answers = prompt(questions[x]).toLowerCase();
+    return (answers);
+  }
+} 
+
+
+function questionAnswers() {
+  for (var x = 0; x < questions.length; x++) {
+    if (questionPrompt(x) === questionAnswers[x]) {
+      alert('Yes that\'s correct!');
+    }
+  }
+}
+
+
 function question1() {
   born = prompt('Was I born on the west coast of the US?').toLowerCase();
   if (born === 'no') {
     alert('Yes that\'s correct! Dan was born in New York');
-    var bornScore = 1;
+    bornScore = 1;
   }
+
+
+
   else {
     alert('Sorry I guess you don\'t really know Dan :/');
     bornScore = 0;
@@ -32,7 +71,7 @@ function question2() {
   school = prompt('Did I major in economics in college?').toLowerCase();
   if (school === 'no') {
     alert('Yes that\'s correct! Dan majored in finance');
-    var schoolScore = 1;
+    schoolScore = 1;
   }
   else {
     alert('Sorry I guess you need to go back to school');
@@ -45,7 +84,7 @@ function question3() {
   language = prompt('Did I study Mandarin Chinese in school?').toLowerCase();
   if (language === 'yes') {
     alert('Yes that\'s correct! Dan studied Mandarin Chinese for a couple years');
-    var languageScore = 1;
+    languageScore = 1;
   }
   else {
     alert('Wrong! You thought he studied Spanish didn\'t you?');
@@ -100,7 +139,7 @@ function question6() {
   if(europe !== europeCorrectAnswer) {
     europeScore = 0;
   }
-} 
+}
 
 function question7() {
   sportsGuess = (prompt('Name a sport I played in high school. I will give you six guesses!').toLowerCase());
@@ -139,11 +178,13 @@ function displayScore() {
 }
 
 getUserName();
-question1();
-question2();
-question3();
-question4();
-question5();
-question6();
-question7();
-displayScore();
+questionPrompt();
+
+//question1();
+//question2();
+//question3();
+//question4();
+//question5();
+//question6();
+//question7();
+//displayScore();
